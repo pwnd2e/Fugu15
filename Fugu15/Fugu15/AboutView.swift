@@ -59,11 +59,11 @@ struct AboutView: View {
             // You should change the links below if you make any changes to Fugu15
             // so that others know where to find the source code
             //
-            Link("Source Code", destination: URL(string: "https://github.com/pinauten/Fugu15")!)
+            Link("Source Code", destination: URL(string: "https://github.com/iarchiveml/Fugu15")!)
                 .padding([.top, .leading, .trailing])
-            Link("License", destination: URL(string: "https://github.com/pinauten/Fugu15/LICENSE")!)
+            Link("License", destination: URL(string: "https://github.com/iarchiveml/Fugu15/LICENSE")!)
                 .padding([.top, .leading, .trailing])
-            Link("Credits", destination: URL(string: "https://github.com/pinauten/Fugu15/blob/master/README.md#Credits")!)
+            Link("Credits", destination: URL(string: "https://github.com/iarchiveml/Fugu15/blob/master/README.md#Credits")!)
                 .padding([.top, .leading, .trailing])
             
             Spacer()
