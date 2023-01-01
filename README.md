@@ -51,12 +51,12 @@ The following commands are especially useful:
 - `r64/r32/r16/r8 <address>`: Read a 64/32/16/8 bit integer at the given kernel address. Add the `@S` suffix to slide the given address or `@P` to read from a physical address.
 - `w64/w32/w16/w8 <address> <value>`: Write the given 64/32/16/8 bit integer to the given kernel address. Also supports the suffixes described above and additionally `@PPL` to write to a PPL protected address (see `krwhelp`).
 - `kcall <address> <up to 8 arguments>`: Call the kernel function at the given address, passing up to 8 64-Bit integer arguments.
-- `tcload <path to TrustCache>`: Load the given TrustCache into the kernel
+- `tcload`: Regenerate the TrustCache
 
 # Procursus Bootstrap and Sileo
 Fugu15 also ships with the procursus bootstrap and Sileo. Run the `bootstrap` command in iDownload to install both. Afterwards, you might have to respring to force Sileo to show up on the Home Screen (`uicache -r`).
 
-Procursus is installed into the `/private/preboot/jb` directory and `/var/jb` is a symlink to it.
+Procursus is installed into the `/private/preboot/<uuid>/jb` directory and `/var/jb` is a symlink to it.
 
 # Known Issues/Bugs
 1. If oobPCI (the process exploiting the kernel) exits, the system might be left in an inconsistent state and panic at some point. This usually occurs about 5 seconds after running the `exit_full` command in iDownload.  
@@ -80,7 +80,7 @@ Q: Do you provide official support for Fugu15? Are any updates planned?
 A: No.  
 
 Q: I installed/updated something through Sileo but it won't launch. How can I fix that?  
-A: Fugu15 uses TrustCache injection to bypass code signing. Therefore, if you install or update something, it's code signature must be in a TrustCache. You can load additional TrustCaches from the iDownload shell via the `tcload` command.  
+A: Fugu15 uses TrustCache injection to bypass code signing. Therefore, if you install or update something, it's code signature must be in the TrustCache. You can regenerate the TrustCache from the iDownload shell via the `tcload` command.  
 
 Q: Wen eta Fugu16??????  
 A: ...  
