@@ -11,9 +11,10 @@ Fugu15.ipa: build/Build/Products/Debug-iphoneos/Fugu15.app
 	rm -rf Payload Fugu15.ipa
 	mkdir Payload
 	cp -r build/Build/Products/Debug-iphoneos/Fugu15.app Payload/Fugu15.app
-	unzip Payload/bootstrap.tar bootstrap.tar2 -d Payload
-	rm -rf Payload/bootstrap.tar
-	mv Payload/bootstrap.tar2 Payload/bootstrap.tar
+	unzip Payload/Fugu15.app/bootstrap.tar bootstrap.tar -d Payload/Fugu15.app/bootstrap
+	rm -rf Payload/Fugu15.app/bootstrap.tar
+	mv Payload/Fugu15.app/bootstrap/bootstrap.tar Payload/Fugu15.app/bootstrap.tar
+	rm -rf Payload/Fugu15.app/bootstrap
 	zip -Ar Fugu15.ipa Payload
 	rm -rf Payload
 
