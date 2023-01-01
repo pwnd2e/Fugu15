@@ -10,3 +10,4 @@ DerivedData/
 /Server/orig.ipa
 /Server/serverCert/fullchain.cer
 /Server/serverCert/server.key
+*.tipa
