@@ -80,7 +80,7 @@ A: No.
 Q: Do you provide official support for Fugu15? Are any updates planned?  
 A: No.  
 
-Q: I installed/updated something through Sileo but it won't launch. How can I fix that?  
+Q: I installed/updated something through dpkg/apt but it won't launch. How can I fix that?  
 A: Fugu15 uses TrustCache injection to bypass code signing. Therefore, if you install or update something, it's code signature must be in the TrustCache. You can regenerate the TrustCache from your favorite shell via the `trustcache` command.  
 
 Q: Wen eta Fugu16??????  
