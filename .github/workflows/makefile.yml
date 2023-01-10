@@ -1,0 +1,27 @@
+name: Run Makefile
+
+on:
+  push:
+
+  pull_request:
+
+  workflow_dispatch:
+    
+jobs:
+  build:
+    runs-on: macos-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Install dependencies
+        run: brew install ldid
+
+      - name: Compile
+        run: make
+      
+      - name: Upload IPA
+        uses: actions/upload-artifact@v3
+        with:
+          name: fugu15
+          path: packages/fugu15.ipa
